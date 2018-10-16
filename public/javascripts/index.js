@@ -696,7 +696,7 @@ var app = {
 	},
 	init: function() {
 		var vidWidth = document.getElementById('vid').clientWidth;
-	    var vidHeight = document.getElementById('vid').clientHeight;
+		var vidHeight = document.getElementById('vid').clientHeight;
 
 		/* init pagination */
 		this.pages = new miniPages({

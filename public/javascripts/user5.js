@@ -13,7 +13,8 @@ var userCollection = 'BodyMainteUsers';
 var couponCollection = 'BodyMainteCoupons';
 var functionsDomain = 'https://us-central1-bodymainteo2o-1366e.cloudfunctions.net/twitter';
 
-var localStorageName = 'BodyMainte';
+// var localStorageName = 'BodyMainte';
+var localStorageName = 'BodyMainte2';
 
 var campaignId = '634501954374a87c6b6f4dde00493ded';
 var adUserId = '4831';
@@ -224,7 +225,7 @@ var user = {
 	},
 	sendEmail: function(email, subjectTitle, content) {
   	var formData = new FormData();
-    formData.append('sender', 'Couponcampaign.predelistyle.com');
+    formData.append('sender', 'couponcampaign@predelistyle.com');
     formData.append('subject', subjectTitle);
     formData.append('recipient', email);
     formData.append('content', content);
@@ -295,7 +296,7 @@ var user = {
 	},
 	trackAnswer: function(userId, questionNo, answer, source) {
 		if (window.location.hostname.indexOf('localhost') < 0) {
-			var type = 'q_a_new';
+			var type = 'q_a';
 			var value = 'q' + questionNo.toString() + '_' + encodeURIComponent(answer);
 			var url = trackingUrl.replace('{{type}}', type).replace('{{value}}', value).replace('{{userId}}', userId).replace('{{source}}', source);
 			return axios.get(url);
