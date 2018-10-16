@@ -13,8 +13,8 @@ var userCollection = 'BodyMainteUsers';
 var couponCollection = 'BodyMainteCoupons';
 var functionsDomain = 'https://us-central1-bodymainteo2o-1366e.cloudfunctions.net/twitter';
 
-// var localStorageName = 'BodyMainte';
-var localStorageName = 'BodyMainte2';
+var localStorageName = 'BodyMainte';
+// var localStorageName = 'BodyMainte2';
 
 var campaignId = '634501954374a87c6b6f4dde00493ded';
 var adUserId = '4831';
