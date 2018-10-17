@@ -727,6 +727,7 @@ var app = {
 		}
 		else {
 			this.pages.toPage('errorPage');
+			user.trackFirstImp('error');
 			return
 		}
     
