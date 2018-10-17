@@ -250,7 +250,7 @@ var app = {
 		        	// var emailContent = '<head><meta charset="utf-8"></head>ご登録ありがとうございました。下記にあるリンクをクリックしてください。その後キャンペーンへの参加をお願いします<br><br><a href="https://couponcampaign.ienomistyle.com/ボディメンテドリンク/?userId=' + email + '" target="_blank">https://couponcampaign.ienomistyle.com/ボディメンテドリンク/?userId=' + email + '</a>';
 		        	var emailContent = '<head><meta charset="utf-8"></head>ご登録ありがとうございました。下記にあるリンクをクリックしてください。その後キャンペーンへの参加をお願いします<br><br><a href="https://couponcampaign.predelistyle.com/%E3%83%9C%E3%83%87%E3%82%A3%E3%83%A1%E3%83%B3%E3%83%86%E3%83%89%E3%83%AA%E3%83%B3%E3%82%AF2/?source=FamilyMart&userId=' + email + '" target="_blank">https://couponcampaign.predelistyle.com/%E3%83%9C%E3%83%87%E3%82%A3%E3%83%A1%E3%83%B3%E3%83%86%E3%83%89%E3%83%AA%E3%83%B3%E3%82%AF</a>';
 		        	user.sendEmail(email, 'Predelistyle ボティメンテ ドリンク', emailContent);
-		        	// user.trackRegister(email, this.params.source, 'email');
+		        	user.trackRegister(email, this.params.source, 'email');
 		        }
 		        else if (response.data.message == 'user exist.') {
 		        	user.info.source = this.params.source;
@@ -648,7 +648,7 @@ var app = {
 		        this.initUser(twitterId, true, true);
 			}
 			else {
-				user.trackFirstImp(this.params.source)
+				// user.trackFirstImp(this.params.source)
 				this.start();
 			}
 		}).catch((error) => {
@@ -727,7 +727,7 @@ var app = {
 		}
 		else {
 			this.pages.toPage('errorPage');
-			user.trackFirstImp('error');
+			// user.trackFirstImp('error');
 			return
 		}
     
