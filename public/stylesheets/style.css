@@ -77,12 +77,22 @@ div {
     width: 300px;
     height: 250px;
   }
+
+  .main-page-image {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 @media( min-width: 480px) {
   .vid-wrapper {
     width: 450px;
     height: 300px;
+  }
+
+  .main-page-image {
+    width: 100%;
+    max-width: 400px;
   }
 }
 
@@ -172,7 +182,7 @@ div {
   width: 100%;
   background-color: #C3FA64;
   text-align: left;
-  background-image: url('../images/header-bg.jpg');
+  /*background-image: url('../images/header-bg.jpg');*/
   background-size: auto 100%;
   background-repeat: repeat-x;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -598,4 +608,9 @@ button:hover .right:after {
   100% {
     top: 5px;
   }
+}
+
+.main-page-image {
+  margin: 10px auto 0px;
+  display: block;
 }
