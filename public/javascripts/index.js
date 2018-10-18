@@ -218,6 +218,7 @@ var app = {
 	  // });
 	  
 	  /* enable start survey button when terms agree checkbox is checked */
+	  document.getElementById('agreeCheck').checked = false;
 	  document.getElementById('agreeCheck').onchange = function() {
 	    if (this.checked) {
 				document.getElementById('startSurvey').disabled = false;
