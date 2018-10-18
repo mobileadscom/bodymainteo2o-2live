@@ -218,7 +218,7 @@ var app = {
 	  // });
 	  
 	  /* enable start survey button when terms agree checkbox is checked */
-	  document.getElementById('agreeCheck').checked = false;
+	 /* document.getElementById('agreeCheck').checked = false;
 	  document.getElementById('agreeCheck').onchange = function() {
 	    if (this.checked) {
 				document.getElementById('startSurvey').disabled = false;
@@ -226,7 +226,7 @@ var app = {
 	    else {
 	    	document.getElementById('startSurvey').disabled = true;
 	    }
-	  }
+	  }*/
 
 		/* email registration */
 	  var form = document.getElementById('regForm');
@@ -346,19 +346,23 @@ var app = {
 
     document.getElementById('toTerms2').addEventListener('click', () => {
     	setTimeout(() => {
-			user.trackTermsPage(this.params.source);
+			// user.trackTermsPage(this.params.source);
+			user.trackRegistrationPage(this.params.source);
+			document.getElementById('tnc-fm').style.display = 'none';
     	}, 300);
     });
 		document.getElementById('toTerms3').addEventListener('click', () => {
     	setTimeout(() => {
-			user.trackTermsPage(this.params.source);
+			// user.trackTermsPage(this.params.source);
+			user.trackRegistrationPage(this.params.source);
+			document.getElementById('tnc-ck').style.display = 'none';
     	}, 300);
     });
-    document.getElementById('startSurvey').addEventListener('click', () => {
+    /*document.getElementById('startSurvey').addEventListener('click', () => {
     	setTimeout(() => {
 			user.trackRegistrationPage(this.params.source);
     	}, 300);
-    })
+    })*/
     document.getElementById('regEmail').addEventListener('click', () => {
 			setTimeout(() => {
 				user.trackEmailLoginClick(this.params.source);
